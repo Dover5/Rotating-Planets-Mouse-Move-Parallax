@@ -1,1998 +1,2050 @@
-body { 
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-position:center;
-	background-size:cover;
-	background-color:#000000;
-	overflow: hidden;
+body {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-color: #000;
+    overflow: hidden
 }
 
 .parallax {
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    overflow: hidden
 }
+
 .parallax-layer {
-  position: fixed;
-  top: 0px;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain
 }
+
 .parallax-layer__1 {
-  background-size: cover;
-}
-.parallax-layer__2 {
-}
-.parallax-layer__3 {
+    background-size: cover
 }
 
 .tooltip {
-  position: relative;
-  display: inline-block;
-  border-bottom: 1px dotted black;
-  left: 360px;
-  top: 998px;
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted #000;
+    left: 360px;
+    top: 998px
 }
 
 .tooltip .tooltiptext {
-  visibility: hidden;
-  width: 120px;
-  background-color: #555;
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px 0;
-  position: absolute;
-  bottom: 125%;
-  left: 50%;
-  margin-left: -60px;
-  opacity: 0;
-  transition: opacity 0.3s;
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity .3s
 }
 
 .tooltip .tooltiptext::after {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: #555 transparent transparent transparent;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent
 }
 
 .tooltip:hover .tooltiptext {
-  visibility: visible;
-  opacity: 1;
+    visibility: visible;
+    opacity: 1
 }
 
 #shadow {
-  width: 910px;
-  height: 910px;
-  box-shadow: inset -487px 0 361px 12px rgba(0,0,0,0.97);
-  left: 1160px;
-  top: 227px;
-  margin: 80px auto;
-  border-radius: 50%;
-  position: fixed;
+    width: 910px;
+    height: 910px;
+    box-shadow: inset -487px 0 361px 12px rgba(0,0,0,.97);
+    left: 1160px;
+    top: 227px;
+    margin: 80px auto;
+    border-radius: 50%;
+    position: fixed
 }
 
 #shadowY {
-  width: 62px;
-  height: 62px;
-    box-shadow: inset -18px 0 14px 0px rgba(0,0,0,0.97);
+    width: 62px;
+    height: 62px;
+    box-shadow: inset -18px 0 14px 0 rgba(0,0,0,.97);
     left: 987px;
     top: 839px;
-  margin: 80px auto;
-  border-radius: 50%;
-  position: fixed;
-  display: none;
+    margin: 80px auto;
+    border-radius: 50%;
+    position: fixed;
+    display: none
 }
 
 #shadowB1 {
-  width: 62px;
-  height: 62px;
-    box-shadow: inset -18px 0 14px 0px rgba(0,0,0,0.97);
+    width: 62px;
+    height: 62px;
+    box-shadow: inset -18px 0 14px 0 rgba(0,0,0,.97);
     left: 1035px;
     top: 869px;
-  margin: 80px auto;
-  border-radius: 50%;
-  position: fixed;
-  display: none;
+    margin: 80px auto;
+    border-radius: 50%;
+    position: fixed;
+    display: none
 }
 
 #shadowB2 {
-  width: 28px;
-  height: 28px;
-    box-shadow: inset -9px 0 14px 0px rgba(0,0,0,0.97);
+    width: 28px;
+    height: 28px;
+    box-shadow: inset -9px 0 14px 0 rgba(0,0,0,.97);
     left: 1464px;
     top: 236px;
-  margin: 80px auto;
-  border-radius: 50%;
-  position: fixed;
-  display: none;
+    margin: 80px auto;
+    border-radius: 50%;
+    position: fixed;
+    display: none
 }
 
-      @-webkit-keyframes bg-slide {
-    from { transform: translateX(0); }
-    to { transform: translateX(-100%); }
+@-webkit-keyframes bg-slide {
+    0% {
+        transform: translateX(0)
+    }
+
+    to {
+        transform: translateX(-100%)
+    }
 }
 
 .wrapper {
-    position:fixed;
-    width:910px;
-	height: 910px;
-    overflow:hidden;
-	border-radius: 50%;
-	  left: 1160px;
-  top: 308px;
+    position: fixed;
+    width: 910px;
+    height: 910px;
+    overflow: hidden;
+    border-radius: 50%;
+    left: 1160px;
+    top: 308px
 }
 
 .bg {
-	width: 1000000%;
-	background: url(src/hoth.jpg) repeat-x;
-	position:absolute;
+    width: 1000000%;
+    background: url(src/hoth.jpg) repeat-x;
+    position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
-    animation: bg-slide 1000000s linear infinite;
+    animation: bg-slide 1000000s linear infinite
 }
 
 .wrapper2 {
-    position:fixed;
-    width:910px;
-	height: 910px;
-    overflow:hidden;
-	border-radius: 50%;
-	  left: 1160px;
-  top: 308px;
-  display:none;
+    position: fixed;
+    width: 910px;
+    height: 910px;
+    overflow: hidden;
+    border-radius: 50%;
+    left: 1160px;
+    top: 308px;
+    display: none
 }
 
 .bg2 {
-	width: 1000000%;
-	background: url(src/tatooine.jpg) repeat-x;
-	position:absolute;
+    width: 1000000%;
+    background: url(src/tatooine.jpg) repeat-x;
+    position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
-    animation: bg-slide 1000000s linear infinite;
+    animation: bg-slide 1000000s linear infinite
 }
 
 .wrapper3 {
-    position:fixed;
-    width:910px;
-	height: 910px;
-    overflow:hidden;
-	border-radius: 50%;
-	  left: 1160px;
-  top: 308px;
-  display:none;
+    position: fixed;
+    width: 910px;
+    height: 910px;
+    overflow: hidden;
+    border-radius: 50%;
+    left: 1160px;
+    top: 308px;
+    display: none
 }
 
 .bg3 {
-	width: 1000000%;
-	background: url(src/jakku.jpg) repeat-x;
-	position:absolute;
+    width: 1000000%;
+    background: url(src/jakku.jpg) repeat-x;
+    position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
-    animation: bg-slide 1000000s linear infinite;
+    animation: bg-slide 1000000s linear infinite
 }
 
 .wrapper4 {
-    position:fixed;
-    width:910px;
-	height: 910px;
-    overflow:hidden;
-	border-radius: 50%;
-	  left: 1160px;
-  top: 308px;
-  display:none;
+    position: fixed;
+    width: 910px;
+    height: 910px;
+    overflow: hidden;
+    border-radius: 50%;
+    left: 1160px;
+    top: 308px;
+    display: none
 }
 
 .bg4 {
-	width: 1000000%;
-	background: url(src/geonosis.jpg) repeat-x;
-	position:absolute;
+    width: 1000000%;
+    background: url(src/geonosis.jpg) repeat-x;
+    position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
-    animation: bg-slide 1000000s linear infinite;
+    animation: bg-slide 1000000s linear infinite
 }
 
 .wrapper5 {
-    position:fixed;
-    width:910px;
-	height: 910px;
-    overflow:hidden;
-	border-radius: 50%;
-	  left: 1160px;
-  top: 308px;
-  display:none;
+    position: fixed;
+    width: 910px;
+    height: 910px;
+    overflow: hidden;
+    border-radius: 50%;
+    left: 1160px;
+    top: 308px;
+    display: none
 }
 
 .bg5 {
-	width: 1000000%;
-	background: url(src/endor.jpg) repeat-x;
-	position:absolute;
+    width: 1000000%;
+    background: url(src/endor.jpg) repeat-x;
+    position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
-    animation: bg-slide 1000000s linear infinite;
+    animation: bg-slide 1000000s linear infinite
 }
 
 .wrapper6 {
-    position:fixed;
-    width:910px;
-	height: 910px;
-    overflow:hidden;
-	border-radius: 50%;
-	  left: 1160px;
-  top: 308px;
-  display:none;
+    position: fixed;
+    width: 910px;
+    height: 910px;
+    overflow: hidden;
+    border-radius: 50%;
+    left: 1160px;
+    top: 308px;
+    display: none
 }
 
 .bg6 {
-	width: 1000000%;
-	background: url(src/kamino.jpg) repeat-x;
-	position:absolute;
+    width: 1000000%;
+    background: url(src/kamino.jpg) repeat-x;
+    position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
-    animation: bg-slide 1000000s linear infinite;
+    animation: bg-slide 1000000s linear infinite
 }
 
 .wrapper7 {
-    position:fixed;
-    width:910px;
-	height: 910px;
-    overflow:hidden;
-	border-radius: 50%;
-	  left: 1160px;
-  top: 308px;
-  display:none;
+    position: fixed;
+    width: 910px;
+    height: 910px;
+    overflow: hidden;
+    border-radius: 50%;
+    left: 1160px;
+    top: 308px;
+    display: none
 }
 
 .bg7 {
-	width: 1000000%;
-	background: url(src/yavinG.jpg) repeat-x;
-	position:absolute;
+    width: 1000000%;
+    background: url(src/yavinG.jpg) repeat-x;
+    position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
-    animation: bg-slide 1000000s linear infinite;
+    animation: bg-slide 1000000s linear infinite
 }
 
 .wrapper8 {
-    position:fixed;
+    position: fixed;
     width: 60px;
-	height: 60px;
-    overflow:hidden;
-	border-radius: 50%;
-	  left: 988px;
-  top: 920px;
-  display:none;
+    height: 60px;
+    overflow: hidden;
+    border-radius: 50%;
+    left: 988px;
+    top: 920px;
+    display: none
 }
 
 .bg8 {
-	width: 1000000%;
-	background: url(src/yavin4.jpg) repeat-x;
-	position:absolute;
+    width: 1000000%;
+    background: url(src/yavin4.jpg) repeat-x;
+    position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
-    animation: bg-slide 500000s linear infinite;
+    animation: bg-slide 500000s linear infinite
 }
 
 .wrapper9 {
-    position:fixed;
-    width:910px;
-	height: 910px;
-    overflow:hidden;
-	border-radius: 50%;
-	  left: 1160px;
-  top: 308px;
-  display: none;
+    position: fixed;
+    width: 910px;
+    height: 910px;
+    overflow: hidden;
+    border-radius: 50%;
+    left: 1160px;
+    top: 308px;
+    display: none
 }
 
 .bg9 {
-	width: 1000000%;
-	background: url(src/mustafar.jpg) repeat-x;
-	position:absolute;
+    width: 1000000%;
+    background: url(src/mustafar.jpg) repeat-x;
+    position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
-    animation: bg-slide 1000000s linear infinite;
+    animation: bg-slide 1000000s linear infinite
 }
 
 .wrapper10 {
-    position:fixed;
-    width:910px;
-	height: 910px;
-    overflow:hidden;
-	border-radius: 50%;
-	  left: 1160px;
-  top: 308px;
-  display: none;
+    position: fixed;
+    width: 910px;
+    height: 910px;
+    overflow: hidden;
+    border-radius: 50%;
+    left: 1160px;
+    top: 308px;
+    display: none
 }
 
 .bg10 {
-	width: 1000000%;
-	background: url(src/bespin.jpg) repeat-x;
-	position:absolute;
+    width: 1000000%;
+    background: url(src/bespin.jpg) repeat-x;
+    position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
-    animation: bg-slide 1000000s linear infinite;
+    animation: bg-slide 1000000s linear infinite
 }
 
 .wrapper11 {
-    position:fixed;
+    position: fixed;
     width: 60px;
-	height: 60px;
-    overflow:hidden;
-	border-radius: 50%;
-	  left: 1035px;
-  top: 950px;
-  display:none;
+    height: 60px;
+    overflow: hidden;
+    border-radius: 50%;
+    left: 1035px;
+    top: 950px;
+    display: none
 }
 
 .bg11 {
-	width: 1000000%;
-	background: url(src/bespinM1.jpg) repeat-x;
-	position:absolute;
+    width: 1000000%;
+    background: url(src/bespinM1.jpg) repeat-x;
+    position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
-    animation: bg-slide 500000s linear infinite;
+    animation: bg-slide 500000s linear infinite
 }
 
 .wrapper12 {
-    position:fixed;
+    position: fixed;
     width: 27px;
-	height: 27px;
-    overflow:hidden;
-	border-radius: 50%;
-	  left: 1464px;
-  top: 317px;
-  display: none;
+    height: 27px;
+    overflow: hidden;
+    border-radius: 50%;
+    left: 1464px;
+    top: 317px;
+    display: none
 }
 
 .bg12 {
-	width: 1000000%;
-	background: url(src/bespinM2.jpg) repeat-x;
-	position:absolute;
+    width: 1000000%;
+    background: url(src/bespinM2.jpg) repeat-x;
+    position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
-    animation: bg-slide 500000s linear infinite;
+    animation: bg-slide 500000s linear infinite
 }
 
 .wrapper13 {
-    position:fixed;
-    width:910px;
-	height: 910px;
-    overflow:hidden;
-	border-radius: 50%;
-	  left: 1160px;
-  top: 308px;
-  display: none;
+    position: fixed;
+    width: 910px;
+    height: 910px;
+    overflow: hidden;
+    border-radius: 50%;
+    left: 1160px;
+    top: 308px;
+    display: none
 }
 
 .bg13 {
-	width: 1000000%;
-	background: url(src/coruscant.jpg) repeat-x;
-	position:absolute;
+    width: 1000000%;
+    background: url(src/coruscant.jpg) repeat-x;
+    position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
-    animation: bg-slide 1000000s linear infinite;
+    animation: bg-slide 1000000s linear infinite
 }
 
 .wrapper14 {
-    position:fixed;
-    width:910px;
-	height: 910px;
-    overflow:hidden;
-	border-radius: 50%;
-	  left: 1160px;
-  top: 308px;
-  display: none;
+    position: fixed;
+    width: 910px;
+    height: 910px;
+    overflow: hidden;
+    border-radius: 50%;
+    left: 1160px;
+    top: 308px;
+    display: none
 }
 
 .bg14 {
-	width: 1000000%;
-	background: url(src/dagobah.jpg) repeat-x;
-	position:absolute;
+    width: 1000000%;
+    background: url(src/dagobah.jpg) repeat-x;
+    position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
-    animation: bg-slide 1000000s linear infinite;
+    animation: bg-slide 1000000s linear infinite
 }
 
 .wrapper15 {
-    position:fixed;
-    width:910px;
-	height: 910px;
-    overflow:hidden;
-	border-radius: 50%;
-	  left: 1160px;
-  top: 308px;
-  display: none;
+    position: fixed;
+    width: 910px;
+    height: 910px;
+    overflow: hidden;
+    border-radius: 50%;
+    left: 1160px;
+    top: 308px;
+    display: none
 }
 
 .bg15 {
-	width: 1000000%;
-	background: url(src/corellia.jpg) repeat-x;
-	position:absolute;
+    width: 1000000%;
+    background: url(src/corellia.jpg) repeat-x;
+    position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
-    animation: bg-slide 1000000s linear infinite;
+    animation: bg-slide 1000000s linear infinite
 }
 
 .wrapper16 {
-    position:fixed;
-    width:910px;
-	height: 910px;
-    overflow:hidden;
-	border-radius: 50%;
-	  left: 1160px;
-  top: 308px;
-  display: none;
+    position: fixed;
+    width: 910px;
+    height: 910px;
+    overflow: hidden;
+    border-radius: 50%;
+    left: 1160px;
+    top: 308px;
+    display: none
 }
 
 .bg16 {
-	width: 1000000%;
-	background: url(src/sullust.jpg) repeat-x;
-	position:absolute;
+    width: 1000000%;
+    background: url(src/sullust.jpg) repeat-x;
+    position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
-    animation: bg-slide 1000000s linear infinite;
+    animation: bg-slide 1000000s linear infinite
 }
 
 .wrapper17 {
-    position:fixed;
-    width:910px;
-	height: 910px;
-    overflow:hidden;
-	border-radius: 50%;
-	  left: 1160px;
-  top: 308px;
-  display: none;
+    position: fixed;
+    width: 910px;
+    height: 910px;
+    overflow: hidden;
+    border-radius: 50%;
+    left: 1160px;
+    top: 308px;
+    display: none
 }
 
 .bg17 {
-	width: 200%;
-	background: url(src/deathstar.jpg) repeat-x;
-	position:absolute;
+    width: 200%;
+    background: url(src/deathstar.jpg) repeat-x;
+    position: absolute;
     top: 0;
     bottom: 0;
-    left: -450px;
+    left: -450px
 }
 
 .wrapper18 {
-    position:fixed;
-    width:910px;
-	height: 910px;
-    overflow:hidden;
-	border-radius: 50%;
-	  left: 1160px;
-  top: 308px;
-  display: none;
+    position: fixed;
+    width: 910px;
+    height: 910px;
+    overflow: hidden;
+    border-radius: 50%;
+    left: 1160px;
+    top: 308px;
+    display: none
 }
 
 .bg18 {
-	width: 1000000%;
-	background: url(src/scarif.jpg) repeat-x;
-	position:absolute;
+    width: 1000000%;
+    background: url(src/scarif.jpg) repeat-x;
+    position: absolute;
     top: 0;
     bottom: 0;
     left: -450px;
-	animation: bg-slide 1000000s linear infinite;
+    animation: bg-slide 1000000s linear infinite
 }
 
 .wrapper19 {
-    position:fixed;
-    width:910px;
-	height: 910px;
-    overflow:hidden;
-	border-radius: 50%;
-	  left: 1160px;
-  top: 308px;
-  display: none;
+    position: fixed;
+    width: 910px;
+    height: 910px;
+    overflow: hidden;
+    border-radius: 50%;
+    left: 1160px;
+    top: 308px;
+    display: none
 }
 
 .bg19 {
-	width: 200%;
-	background: url(src/starkiller.png) repeat-x;
-	position:absolute;
+    width: 200%;
+    background: url(src/starkiller.png) repeat-x;
+    position: absolute;
     top: 0;
     bottom: 0;
-    left: -450px;
+    left: -450px
 }
 
 .wrapper20 {
-    position:fixed;
-    width:910px;
-	height: 910px;
-    overflow:hidden;
-	border-radius: 50%;
-	  left: 1160px;
-  top: 308px;
-  display: none;
+    position: fixed;
+    width: 910px;
+    height: 910px;
+    overflow: hidden;
+    border-radius: 50%;
+    left: 1160px;
+    top: 308px;
+    display: none
 }
 
 .bg20 {
-	width: 1000000%;
-	background: url(src/felucia.jpg) repeat-x;
-	position:absolute;
+    width: 1000000%;
+    background: url(src/felucia.jpg) repeat-x;
+    position: absolute;
     top: 0;
     bottom: 0;
     left: -450px;
-	animation: bg-slide 1000000s linear infinite;
+    animation: bg-slide 1000000s linear infinite
 }
 
 #earthR {
-  width: 70px;
-  height: 70px;
-  box-shadow: -1.5px 0 6px 2px rgba(255,97,0,0.17);
-  left: 1580px;
-  top: 648px;
-  margin: 80px auto;
-  border-radius: 50%;
-  position: fixed;
-  transform: scale(13);
-  display:none;
+    width: 70px;
+    height: 70px;
+    box-shadow: -1.5px 0 6px 2px rgba(255,97,0,.17);
+    left: 1580px;
+    top: 648px;
+    margin: 80px auto;
+    border-radius: 50%;
+    position: fixed;
+    transform: scale(13);
+    display: none
 }
 
 #earthR2 {
-  width: 70px;
-  height: 70px;
-  box-shadow: -1px 0 2px 1px rgba(255,59,0,0.24);
-  left: 1580px;
-  top: 648px;
-  margin: 80px auto;
-  border-radius: 50%;
-  position: fixed;
-  transform: scale(13);
-  display:none;
+    width: 70px;
+    height: 70px;
+    box-shadow: -1px 0 2px 1px rgba(255,59,0,.24);
+    left: 1580px;
+    top: 648px;
+    margin: 80px auto;
+    border-radius: 50%;
+    position: fixed;
+    transform: scale(13);
+    display: none
 }
 
 #earthR3 {
-  width: 70px;
-  height: 70px;
-  box-shadow: -1.5px 0 6px 2px rgba(0,0,230,0.10);
-  left: 1580px;
-  top: 648px;
-  margin: 80px auto;
-  border-radius: 50%;
-  position: fixed;
-  transform: scale(13);
-  display:none;
+    width: 70px;
+    height: 70px;
+    box-shadow: -1.5px 0 6px 2px rgba(0,0,230,.1);
+    left: 1580px;
+    top: 648px;
+    margin: 80px auto;
+    border-radius: 50%;
+    position: fixed;
+    transform: scale(13);
+    display: none
 }
 
 #earthR5 {
-  width: 70px;
-  height: 70px;
-  box-shadow: -1.5px 0 6px 1px rgba(255,94,0,0.22);
-  left: 1580px;
-  top: 648px;
-  margin: 80px auto;
-  border-radius: 50%;
-  position: fixed;
-  transform: scale(13);
-  display:none;
+    width: 70px;
+    height: 70px;
+    box-shadow: -1.5px 0 6px 1px rgba(255,94,0,.22);
+    left: 1580px;
+    top: 648px;
+    margin: 80px auto;
+    border-radius: 50%;
+    position: fixed;
+    transform: scale(13);
+    display: none
 }
 
 #earthR6 {
-  width: 70px;
-  height: 70px;
-  box-shadow: -1px 0 2px 1px rgba(255,94,0,0.23);
-  left: 1580px;
-  top: 648px;
-  margin: 80px auto;
-  border-radius: 50%;
-  position: fixed;
-  transform: scale(13);
-  display:none;
+    width: 70px;
+    height: 70px;
+    box-shadow: -1px 0 2px 1px rgba(255,94,0,.23);
+    left: 1580px;
+    top: 648px;
+    margin: 80px auto;
+    border-radius: 50%;
+    position: fixed;
+    transform: scale(13);
+    display: none
 }
 
 #earthR7 {
-  width: 70px;
-  height: 70px;
-  box-shadow: -1.5px 0 6px 2px rgba(255,24,0,0.23);
-  left: 1580px;
-  top: 648px;
-  margin: 80px auto;
-  border-radius: 50%;
-  position: fixed;
-  transform: scale(13);
-  display:none;
+    width: 70px;
+    height: 70px;
+    box-shadow: -1.5px 0 6px 2px rgba(255,24,0,.23);
+    left: 1580px;
+    top: 648px;
+    margin: 80px auto;
+    border-radius: 50%;
+    position: fixed;
+    transform: scale(13);
+    display: none
 }
 
 #earthR8 {
-  width: 70px;
-  height: 70px;
-  box-shadow: -1px 0 2px 1px rgba(255,54,0,0.27);
-  left: 1580px;
-  top: 648px;
-  margin: 80px auto;
-  border-radius: 50%;
-  position: fixed;
-  transform: scale(13);
-  display:none;
+    width: 70px;
+    height: 70px;
+    box-shadow: -1px 0 2px 1px rgba(255,54,0,.27);
+    left: 1580px;
+    top: 648px;
+    margin: 80px auto;
+    border-radius: 50%;
+    position: fixed;
+    transform: scale(13);
+    display: none
 }
 
 #earthR9 {
-  width: 70px;
-  height: 70px;
-  box-shadow: -1.5px 0 6px 2px rgba(173,94,0,0.33);
-  left: 1580px;
-  top: 648px;
-  margin: 80px auto;
-  border-radius: 50%;
-  position: fixed;
-  transform: scale(13);
-  display:none;
+    width: 70px;
+    height: 70px;
+    box-shadow: -1.5px 0 6px 2px rgba(173,94,0,.33);
+    left: 1580px;
+    top: 648px;
+    margin: 80px auto;
+    border-radius: 50%;
+    position: fixed;
+    transform: scale(13);
+    display: none
 }
 
 #earthR10 {
-  width: 70px;
-  height: 70px;
-  box-shadow: -1px 0 2px 1px rgba(189,94,0,0.23);
-  left: 1580px;
-  top: 648px;
-  margin: 80px auto;
-  border-radius: 50%;
-  position: fixed;
-  transform: scale(13);
-  display:none;
+    width: 70px;
+    height: 70px;
+    box-shadow: -1px 0 2px 1px rgba(189,94,0,.23);
+    left: 1580px;
+    top: 648px;
+    margin: 80px auto;
+    border-radius: 50%;
+    position: fixed;
+    transform: scale(13);
+    display: none
 }
 
+
 #earthR11 {
-  width: 70px;
-  height: 70px;
-  box-shadow: -1.5px 0 6px 1px rgba(255,94,0,0.2);
-  left: 1580px;
-  top: 648px;
-  margin: 80px auto;
-  border-radius: 50%;
-  position: fixed;
-  transform: scale(13);
-  display:none;
+    width: 70px;
+    height: 70px;
+    box-shadow: -1.5px 0 6px 1px rgba(255,94,0,.2);
+    left: 1580px;
+    top: 648px;
+    margin: 80px auto;
+    border-radius: 50%;
+    position: fixed;
+    transform: scale(13);
+    display: none
 }
 
 #earthR12 {
-  width: 70px;
-  height: 70px;
-  box-shadow: -1px 0 2px 1px rgba(255,94,0,0.13);
-  left: 1580px;
-  top: 648px;
-  margin: 80px auto;
-  border-radius: 50%;
-  position: fixed;
-  transform: scale(13);
-  display:none;
+    width: 70px;
+    height: 70px;
+    box-shadow: -1px 0 2px 1px rgba(255,94,0,.13);
+    left: 1580px;
+    top: 648px;
+    margin: 80px auto;
+    border-radius: 50%;
+    position: fixed;
+    transform: scale(13);
+    display: none
 }
 
 #earthR13 {
-  width: 70px;
-  height: 70px;
-  box-shadow: -1.5px 0 4px 2px rgba(185,218,0,0.19);
-  left: 1580px;
-  top: 648px;
-  margin: 80px auto;
-  border-radius: 50%;
-  position: fixed;
-  transform: scale(13);
-  display:none;
+    width: 70px;
+    height: 70px;
+    box-shadow: -1.5px 0 4px 2px rgba(185,218,0,.19);
+    left: 1580px;
+    top: 648px;
+    margin: 80px auto;
+    border-radius: 50%;
+    position: fixed;
+    transform: scale(13);
+    display: none
 }
 
 #earthR14 {
-  width: 70px;
-  height: 70px;
-  box-shadow: -1px 0 2px 1px rgba(65,82,0,0.14);
-  left: 1580px;
-  top: 648px;
-  margin: 80px auto;
-  border-radius: 50%;
-  position: fixed;
-  transform: scale(13);
-  display:none;
+    width: 70px;
+    height: 70px;
+    box-shadow: -1px 0 2px 1px rgba(65,82,0,.14);
+    left: 1580px;
+    top: 648px;
+    margin: 80px auto;
+    border-radius: 50%;
+    position: fixed;
+    transform: scale(13);
+    display: none
 }
 
 #earthR15 {
-  width: 70px;
-  height: 70px;
-  box-shadow: -1.5px 0 6px 2px rgba(255,50,0,0.23);
-  left: 1580px;
-  top: 648px;
-  margin: 80px auto;
-  border-radius: 50%;
-  position: fixed;
-  transform: scale(13);
-  display:none;
+    width: 70px;
+    height: 70px;
+    box-shadow: -1.5px 0 6px 2px rgba(255,50,0,.23);
+    left: 1580px;
+    top: 648px;
+    margin: 80px auto;
+    border-radius: 50%;
+    position: fixed;
+    transform: scale(13);
+    display: none
 }
 
 #earthR16 {
-  width: 70px;
-  height: 70px;
-  box-shadow: -1px 0 2px 1px rgba(255,54,0,0.24);
-  left: 1580px;
-  top: 648px;
-  margin: 80px auto;
-  border-radius: 50%;
-  position: fixed;
-  transform: scale(13);
-  display:none;
+    width: 70px;
+    height: 70px;
+    box-shadow: -1px 0 2px 1px rgba(255,54,0,.24);
+    left: 1580px;
+    top: 648px;
+    margin: 80px auto;
+    border-radius: 50%;
+    position: fixed;
+    transform: scale(13);
+    display: none
 }
 
 #earthS {
-  width: 70px;
-  height: 70px;
-  box-shadow: -1.5px 0 6px 2px rgba(30,144,255,0.23);
-  left: 1580px;
-  top: 648px;
-  margin: 80px auto;
-  border-radius: 50%;
-  position: fixed;
-  transform: scale(13);
+    width: 70px;
+    height: 70px;
+    box-shadow: -1.5px 0 6px 2px rgba(30,144,255,.23);
+    left: 1580px;
+    top: 648px;
+    margin: 80px auto;
+    border-radius: 50%;
+    position: fixed;
+    transform: scale(13)
 }
 
 #earthDS {
-  width: 70px;
-  height: 70px;
-  box-shadow: -1.5px 0 6px 2px rgba(255,255,255,0.13);
-  left: 1580px;
-  top: 648px;
-  margin: 80px auto;
-  border-radius: 50%;
-  position: fixed;
-  transform: scale(13);
-  display: none;
+    width: 70px;
+    height: 70px;
+    box-shadow: -1.5px 0 6px 2px rgba(255,255,255,.13);
+    left: 1580px;
+    top: 648px;
+    margin: 80px auto;
+    border-radius: 50%;
+    position: fixed;
+    transform: scale(13);
+    display: none
 }
 
 #earthX {
-  width: 70px;
-  height: 70px;
-  box-shadow: -1.5px 0 6px 2px rgba(30,144,255,0.23);
-  left: 1580px;
-  top: 648px;
-  margin: 80px auto;
-  border-radius: 50%;
-  position: fixed;
-  transform: scale(13);
-  display: none;
+    width: 70px;
+    height: 70px;
+    box-shadow: -1.5px 0 6px 2px rgba(30,144,255,.23);
+    left: 1580px;
+    top: 648px;
+    margin: 80px auto;
+    border-radius: 50%;
+    position: fixed;
+    transform: scale(13);
+    display: none
 }
 
 #earthX2 {
-  width: 70px;
-  height: 70px;
-  box-shadow: -1px 0 2px 1px rgba(0,140,255,0.15);
-  left: 1580px;
-  top: 648px;
-  margin: 80px auto;
-  border-radius: 50%;
-  position: fixed;
-  transform: scale(13);
-  display: none;
+    width: 70px;
+    height: 70px;
+    box-shadow: -1px 0 2px 1px rgba(0,140,255,.15);
+    left: 1580px;
+    top: 648px;
+    margin: 80px auto;
+    border-radius: 50%;
+    position: fixed;
+    transform: scale(13);
+    display: none
 }
 
 #earthX3 {
-  width: 70px;
-  height: 70px;
-  box-shadow: -1.5px 0 6px 2px rgba(30,144,255,0.23);
-  left: 1580px;
-  top: 648px;
-  margin: 80px auto;
-  border-radius: 50%;
-  position: fixed;
-  transform: scale(13);
-  display: none;
+    width: 70px;
+    height: 70px;
+    box-shadow: -1.5px 0 6px 2px rgba(30,144,255,.23);
+    left: 1580px;
+    top: 648px;
+    margin: 80px auto;
+    border-radius: 50%;
+    position: fixed;
+    transform: scale(13);
+    display: none
 }
 
 #earthX4 {
-  width: 70px;
-  height: 70px;
-  box-shadow: -1px 0 2px 1px rgba(0,140,255,0.15);
-  left: 1580px;
-  top: 648px;
-  margin: 80px auto;
-  border-radius: 50%;
-  position: fixed;
-  transform: scale(13);
-  display: none;
+    width: 70px;
+    height: 70px;
+    box-shadow: -1px 0 2px 1px rgba(0,140,255,.15);
+    left: 1580px;
+    top: 648px;
+    margin: 80px auto;
+    border-radius: 50%;
+    position: fixed;
+    transform: scale(13);
+    display: none
 }
 
 #earthX5 {
-  width: 70px;
-  height: 70px;
-  box-shadow: -1.5px 0 6px 2px rgba(30,144,255,0.23);
-  left: 1580px;
-  top: 648px;
-  margin: 80px auto;
-  border-radius: 50%;
-  position: fixed;
-  transform: scale(13);
-  display: none;
+    width: 70px;
+    height: 70px;
+    box-shadow: -1.5px 0 6px 2px rgba(30,144,255,.23);
+    left: 1580px;
+    top: 648px;
+    margin: 80px auto;
+    border-radius: 50%;
+    position: fixed;
+    transform: scale(13);
+    display: none
 }
 
 #earthX6 {
-  width: 70px;
-  height: 70px;
-  box-shadow: -1px 0 2px 1px rgba(0,140,255,0.15);
-  left: 1580px;
-  top: 648px;
-  margin: 80px auto;
-  border-radius: 50%;
-  position: fixed;
-  transform: scale(13);
-  display: none;
+    width: 70px;
+    height: 70px;
+    box-shadow: -1px 0 2px 1px rgba(0,140,255,.15);
+    left: 1580px;
+    top: 648px;
+    margin: 80px auto;
+    border-radius: 50%;
+    position: fixed;
+    transform: scale(13);
+    display: none
 }
 
 #earthX7 {
-  width: 70px;
-  height: 70px;
-  box-shadow: -1.5px 0 6px 2px rgba(30,144,255,0.23);
-  left: 1580px;
-  top: 648px;
-  margin: 80px auto;
-  border-radius: 50%;
-  position: fixed;
-  transform: scale(13);
-  display: none;
+    width: 70px;
+    height: 70px;
+    box-shadow: -1.5px 0 6px 2px rgba(30,144,255,.23);
+    left: 1580px;
+    top: 648px;
+    margin: 80px auto;
+    border-radius: 50%;
+    position: fixed;
+    transform: scale(13);
+    display: none
 }
 
 #earthX8 {
-  width: 70px;
-  height: 70px;
-  box-shadow: -1px 0 2px 1px rgba(0,140,255,0.15);
-  left: 1580px;
-  top: 648px;
-  margin: 80px auto;
-  border-radius: 50%;
-  position: fixed;
-  transform: scale(13);
-  display: none;
+    width: 70px;
+    height: 70px;
+    box-shadow: -1px 0 2px 1px rgba(0,140,255,.15);
+    left: 1580px;
+    top: 648px;
+    margin: 80px auto;
+    border-radius: 50%;
+    position: fixed;
+    transform: scale(13);
+    display: none
 }
 
 #earthX9 {
-  width: 70px;
-  height: 70px;
-  box-shadow: -1.5px 0 6px 2px rgba(30,144,255,0.23);
-  left: 1580px;
-  top: 648px;
-  margin: 80px auto;
-  border-radius: 50%;
-  position: fixed;
-  transform: scale(13);
-  display: none;
+    width: 70px;
+    height: 70px;
+    box-shadow: -1.5px 0 6px 2px rgba(30,144,255,.23);
+    left: 1580px;
+    top: 648px;
+    margin: 80px auto;
+    border-radius: 50%;
+    position: fixed;
+    transform: scale(13);
+    display: none
 }
 
 #earthX10 {
-  width: 70px;
-  height: 70px;
-  box-shadow: -1px 0 2px 1px rgba(0,140,255,0.15);
-  left: 1580px;
-  top: 648px;
-  margin: 80px auto;
-  border-radius: 50%;
-  position: fixed;
-  transform: scale(13);
-  display: none;
+    width: 70px;
+    height: 70px;
+    box-shadow: -1px 0 2px 1px rgba(0,140,255,.15);
+    left: 1580px;
+    top: 648px;
+    margin: 80px auto;
+    border-radius: 50%;
+    position: fixed;
+    transform: scale(13);
+    display: none
 }
 
 #earthX11 {
-  width: 70px;
-  height: 70px;
-  box-shadow: -1.5px 0 6px 2px rgba(30,144,255,0.23);
-  left: 1580px;
-  top: 648px;
-  margin: 80px auto;
-  border-radius: 50%;
-  position: fixed;
-  transform: scale(13);
-  display: none;
+    width: 70px;
+    height: 70px;
+    box-shadow: -1.5px 0 6px 2px rgba(30,144,255,.23);
+    left: 1580px;
+    top: 648px;
+    margin: 80px auto;
+    border-radius: 50%;
+    position: fixed;
+    transform: scale(13);
+    display: none
 }
 
 #earthX12 {
-  width: 70px;
-  height: 70px;
-  box-shadow: -1px 0 2px 1px rgba(0,140,255,0.15);
-  left: 1580px;
-  top: 648px;
-  margin: 80px auto;
-  border-radius: 50%;
-  position: fixed;
-  transform: scale(13);
-  display: none;
+    width: 70px;
+    height: 70px;
+    box-shadow: -1px 0 2px 1px rgba(0,140,255,.15);
+    left: 1580px;
+    top: 648px;
+    margin: 80px auto;
+    border-radius: 50%;
+    position: fixed;
+    transform: scale(13);
+    display: none
 }
 
 #earthX13 {
-  width: 70px;
-  height: 70px;
-  box-shadow: -1.5px 0 6px 2px rgba(0,200,255,0.23);
-  left: 1580px;
-  top: 648px;
-  margin: 80px auto;
-  border-radius: 50%;
-  position: fixed;
-  transform: scale(13);
-  display: none;
+    width: 70px;
+    height: 70px;
+    box-shadow: -1.5px 0 6px 2px rgba(0,200,255,.23);
+    left: 1580px;
+    top: 648px;
+    margin: 80px auto;
+    border-radius: 50%;
+    position: fixed;
+    transform: scale(13);
+    display: none
 }
 
 #earthX14 {
-  width: 70px;
-  height: 70px;
-  box-shadow: -1px 0 2px 1px rgba(0,161,255,0.15);
-  left: 1580px;
-  top: 648px;
-  margin: 80px auto;
-  border-radius: 50%;
-  position: fixed;
-  transform: scale(13);
-  display: none;
+    width: 70px;
+    height: 70px;
+    box-shadow: -1px 0 2px 1px rgba(0,161,255,.15);
+    left: 1580px;
+    top: 648px;
+    margin: 80px auto;
+    border-radius: 50%;
+    position: fixed;
+    transform: scale(13);
+    display: none
 }
 
 #earthX15 {
-  width: 67px;
-  height: 67px;
-  box-shadow: -1.5px 0 6px 2px rgba(30,144,255,0.23);
-  left: 1580px;
-  top: 648px;
-  margin: 80px auto;
-  border-radius: 50%;
-  position: fixed;
-  transform: scale(13);
-  display: none;
+    width: 67px;
+    height: 67px;
+    box-shadow: -1.5px 0 6px 2px rgba(30,144,255,.23);
+    left: 1580px;
+    top: 648px;
+    margin: 80px auto;
+    border-radius: 50%;
+    position: fixed;
+    transform: scale(13);
+    display: none
 }
 
 #earthX16 {
-  width: 67px;
-  height: 67px;
-  box-shadow: -1px 0 2px 1px rgba(0,140,255,0.15);
-  left: 1580px;
-  top: 648px;
-  margin: 80px auto;
-  border-radius: 50%;
-  position: fixed;
-  transform: scale(13);
-  display: none;
+    width: 67px;
+    height: 67px;
+    box-shadow: -1px 0 2px 1px rgba(0,140,255,.15);
+    left: 1580px;
+    top: 648px;
+    margin: 80px auto;
+    border-radius: 50%;
+    position: fixed;
+    transform: scale(13);
+    display: none
 }
 
 #earthX17 {
-  width: 70px;
-  height: 70px;
-  box-shadow: -1.5px 0 6px 2px rgba(226,100,255,0.23);
-  left: 1580px;
-  top: 648px;
-  margin: 80px auto;
-  border-radius: 50%;
-  position: fixed;
-  transform: scale(13);
-  display: none;
+    width: 70px;
+    height: 70px;
+    box-shadow: -1.5px 0 6px 2px rgba(226,100,255,.23);
+    left: 1580px;
+    top: 648px;
+    margin: 80px auto;
+    border-radius: 50%;
+    position: fixed;
+    transform: scale(13);
+    display: none
 }
 
 #earthX18 {
-  width: 70px;
-  height: 70px;
-  box-shadow: -1px 0 2px 1px rgba(229,100,255,0.15);
-  left: 1580px;
-  top: 648px;
-  margin: 80px auto;
-  border-radius: 50%;
-  position: fixed;
-  transform: scale(13);
-  display: none;
+    width: 70px;
+    height: 70px;
+    box-shadow: -1px 0 2px 1px rgba(229,100,255,.15);
+    left: 1580px;
+    top: 648px;
+    margin: 80px auto;
+    border-radius: 50%;
+    position: fixed;
+    transform: scale(13);
+    display: none
 }
 
 #earthS2 {
-  width: 70px;
-  height: 70px;
-  box-shadow: inset 3px 0 2px 0px rgba(255,255,255,0.5),
-    inset 9px 0 3px -2px rgba(255,255,255,0.3);
-  left: 1580px;
-  top: 648px;
-  margin: 80px auto;
-  border-radius: 50%;
-  position: fixed;
-  transform: scale(13);
+    width: 70px;
+    height: 70px;
+    box-shadow: inset 3px 0 2px 0 rgba(255,255,255,.5);
+    left: 1580px;
+    top: 648px;
+    margin: 80px auto;
+    border-radius: 50%;
+    position: fixed;
+    transform: scale(13)
 }
 
 #earthS3 {
-  width: 70px;
-  height: 70px;
-  box-shadow: inset 3px 0 2px 0px rgba(255,255,255,0.5),
-    inset 9px 0 3px -2px rgba(255,255,255,0.3);
-  left: 1580px;
-  top: 648px;
-  margin: 80px auto;
-  border-radius: 50%;
-  position: fixed;
-  transform: scale(13);
-  display: none;
+    width: 70px;
+    height: 70px;
+    box-shadow: inset 3px 0 2px 0 rgba(255,255,255,.5);
+    left: 1580px;
+    top: 648px;
+    margin: 80px auto;
+    border-radius: 50%;
+    position: fixed;
+    transform: scale(13);
+    display: none
 }
 
 #earthS4 {
-  width: 70px;
-  height: 70px;
-  box-shadow: inset 3px 0 2px 0px rgba(255,255,255,0.5),
-    inset 9px 0 3px -2px rgba(255,255,255,0.3);
-  left: 1580px;
-  top: 648px;
-  margin: 80px auto;
-  border-radius: 50%;
-  position: fixed;
-  transform: scale(13);
-  display: none;
+    width: 70px;
+    height: 70px;
+    box-shadow: inset 3px 0 2px 0 rgba(255,255,255,.5);
+    left: 1580px;
+    top: 648px;
+    margin: 80px auto;
+    border-radius: 50%;
+    position: fixed;
+    transform: scale(13);
+    display: none
 }
 
 #earthS5 {
-  width: 70px;
-  height: 70px;
-  box-shadow: inset 3px 0 2px 0px rgba(255,255,255,0.5),
-    inset 9px 0 3px -2px rgba(255,255,255,0.3);
-  left: 1580px;
-  top: 648px;
-  margin: 80px auto;
-  border-radius: 50%;
-  position: fixed;
-  transform: scale(13);
-  display: none;
+    width: 70px;
+    height: 70px;
+    box-shadow: inset 3px 0 2px 0 rgba(255,255,255,.5);
+    left: 1580px;
+    top: 648px;
+    margin: 80px auto;
+    border-radius: 50%;
+    position: fixed;
+    transform: scale(13);
+    display: none
 }
 
 #earthS6 {
-  width: 70px;
-  height: 70px;
-  box-shadow: inset 3px 0 2px 0px rgba(255,255,255,0.5),
-    inset 9px 0 3px -2px rgba(255,255,255,0.3);
-  left: 1580px;
-  top: 648px;
-  margin: 80px auto;
-  border-radius: 50%;
-  position: fixed;
-  transform: scale(13);
-  display: none;
+    width: 70px;
+    height: 70px;
+    box-shadow: inset 3px 0 2px 0 rgba(255,255,255,.5);
+    left: 1580px;
+    top: 648px;
+    margin: 80px auto;
+    border-radius: 50%;
+    position: fixed;
+    transform: scale(13);
+    display: none
 }
 
 #earthS7 {
-  width: 70px;
-  height: 70px;
-  box-shadow: inset 3px 0 2px 0px rgba(255,255,255,0.5),
-    inset 9px 0 3px -2px rgba(255,255,255,0.3);
-  left: 1580px;
-  top: 648px;
-  margin: 80px auto;
-  border-radius: 50%;
-  position: fixed;
-  transform: scale(13);
-  display: none;
+    width: 70px;
+    height: 70px;
+    box-shadow: inset 3px 0 2px 0 rgba(255,255,255,.5);
+    left: 1580px;
+    top: 648px;
+    margin: 80px auto;
+    border-radius: 50%;
+    position: fixed;
+    transform: scale(13);
+    display: none
 }
 
 #earthS8 {
-  width: 70px;
-  height: 70px;
-  box-shadow: inset 3px 0 2px 0px rgba(255,255,255,0.5),
-    inset 9px 0 3px -2px rgba(255,255,255,0.3);
-  left: 1580px;
-  top: 648px;
-  margin: 80px auto;
-  border-radius: 50%;
-  position: fixed;
-  transform: scale(13);
-  display: none;
+    width: 70px;
+    height: 70px;
+    box-shadow: inset 3px 0 2px 0 rgba(255,255,255,.5);
+    left: 1580px;
+    top: 648px;
+    margin: 80px auto;
+    border-radius: 50%;
+    position: fixed;
+    transform: scale(13);
+    display: none
 }
 
 #earthS9 {
-  width: 70px;
-  height: 70px;
-  box-shadow: inset 3px 0 2px 0px rgba(255,255,255,0.5),
-    inset 9px 0 3px -2px rgba(255,255,255,0.3);
-  left: 1580px;
-  top: 648px;
-  margin: 80px auto;
-  border-radius: 50%;
-  position: fixed;
-  transform: scale(13);
-  display: none;
+    width: 70px;
+    height: 70px;
+    box-shadow: inset 3px 0 2px 0 rgba(255,255,255,.5);
+    left: 1580px;
+    top: 648px;
+    margin: 80px auto;
+    border-radius: 50%;
+    position: fixed;
+    transform: scale(13);
+    display: none
 }
 
 #earthS10 {
-  width: 70px;
-  height: 70px;
-  box-shadow: inset 3px 0 2px 0px rgba(255,255,255,0.5),
-    inset 9px 0 3px -2px rgba(255,255,255,0.3);
-  left: 1580px;
-  top: 648px;
-  margin: 80px auto;
-  border-radius: 50%;
-  position: fixed;
-  transform: scale(13);
-  display: none;
+    width: 70px;
+    height: 70px;
+    box-shadow: inset 3px 0 2px 0 rgba(255,255,255,.5);
+    left: 1580px;
+    top: 648px;
+    margin: 80px auto;
+    border-radius: 50%;
+    position: fixed;
+    transform: scale(13);
+    display: none
 }
 
 #earthS11 {
-  width: 70px;
-  height: 70px;
-  box-shadow: inset 3px 0 2px 0px rgba(255,255,255,0.5),
-    inset 9px 0 3px -2px rgba(255,255,255,0.3);
-  left: 1580px;
-  top: 648px;
-  margin: 80px auto;
-  border-radius: 50%;
-  position: fixed;
-  transform: scale(13);
-  display: none;
+    width: 70px;
+    height: 70px;
+    box-shadow: inset 3px 0 2px 0 rgba(255,255,255,.5);
+    left: 1580px;
+    top: 648px;
+    margin: 80px auto;
+    border-radius: 50%;
+    position: fixed;
+    transform: scale(13);
+    display: none
 }
 
 #earthS12 {
-  width: 70px;
-  height: 70px;
-  box-shadow: inset 3px 0 2px 0px rgba(255,255,255,0.5),
-    inset 9px 0 3px -2px rgba(255,255,255,0.3);
-  left: 1580px;
-  top: 648px;
-  margin: 80px auto;
-  border-radius: 50%;
-  position: fixed;
-  transform: scale(13);
-  display: none;
+    width: 70px;
+    height: 70px;
+    box-shadow: inset 3px 0 2px 0 rgba(255,255,255,.5);
+    left: 1580px;
+    top: 648px;
+    margin: 80px auto;
+    border-radius: 50%;
+    position: fixed;
+    transform: scale(13);
+    display: none
 }
 
 #earthS13 {
-  width: 70px;
-  height: 70px;
-  box-shadow: inset 3px 0 2px 0px rgba(255,255,255,0.5),
-    inset 9px 0 3px -2px rgba(255,255,255,0.3);
-  left: 1580px;
-  top: 648px;
-  margin: 80px auto;
-  border-radius: 50%;
-  position: fixed;
-  transform: scale(13);
-  display: none;
+    width: 70px;
+    height: 70px;
+    box-shadow: inset 3px 0 2px 0 rgba(255,255,255,.5);
+    left: 1580px;
+    top: 648px;
+    margin: 80px auto;
+    border-radius: 50%;
+    position: fixed;
+    transform: scale(13);
+    display: none
 }
 
 #earthS14 {
-  width: 70px;
-  height: 70px;
-  box-shadow: inset 3px 0 2px 0px rgba(255,255,255,0.5),
-    inset 9px 0 3px -2px rgba(255,255,255,0.3);
-  left: 1580px;
-  top: 648px;
-  margin: 80px auto;
-  border-radius: 50%;
-  position: fixed;
-  transform: scale(13);
-  display: none;
+    width: 70px;
+    height: 70px;
+    box-shadow: inset 3px 0 2px 0 rgba(255,255,255,.5);
+    left: 1580px;
+    top: 648px;
+    margin: 80px auto;
+    border-radius: 50%;
+    position: fixed;
+    transform: scale(13);
+    display: none
 }
 
 #earthS15 {
-  width: 70px;
-  height: 70px;
-  box-shadow: inset 3px 0 2px 0px rgba(255,255,255,0.5),
-    inset 9px 0 3px -2px rgba(255,255,255,0.3);
-  left: 1580px;
-  top: 648px;
-  margin: 80px auto;
-  border-radius: 50%;
-  position: fixed;
-  transform: scale(13);
-  display: none;
+    width: 70px;
+    height: 70px;
+    box-shadow: inset 3px 0 2px 0 rgba(255,255,255,.5);
+    left: 1580px;
+    top: 648px;
+    margin: 80px auto;
+    border-radius: 50%;
+    position: fixed;
+    transform: scale(13);
+    display: none
 }
 
 #earthS16 {
-  width: 70px;
-  height: 70px;
-  box-shadow: inset 3px 0 2px 0px rgba(255,255,255,0.5),
-    inset 9px 0 3px -2px rgba(255,255,255,0.3);
-  left: 1580px;
-  top: 648px;
-  margin: 80px auto;
-  border-radius: 50%;
-  position: fixed;
-  transform: scale(13);
-  display: none;
+    width: 70px;
+    height: 70px;
+    box-shadow: inset 3px 0 2px 0 rgba(255,255,255,.5);
+    left: 1580px;
+    top: 648px;
+    margin: 80px auto;
+    border-radius: 50%;
+    position: fixed;
+    transform: scale(13);
+    display: none
 }
 
 #earthSY {
-  width: 61px;
-  height: 61px;
-  box-shadow: inset 3px 0 4px -2px rgba(255,255,255,0.5),
-    inset 8px 0 3px -2px rgba(255,255,255,0.3);
-  left: 988px;
-  top: 840px;
-  margin: 80px auto;
-  border-radius: 50%;
-  position: fixed;
-  display: none;
+    width: 61px;
+    height: 61px;
+    box-shadow: inset 3px 0 4px -2px rgba(255,255,255,.5);
+    left: 988px;
+    top: 840px;
+    margin: 80px auto;
+    border-radius: 50%;
+    position: fixed;
+    display: none
 }
 
 #earthSB1 {
-  width: 61px;
-  height: 61px;
-  box-shadow: inset 3px 0 4px -2px rgba(255,255,255,0.5),
-    inset 8px 0 3px -2px rgba(255,255,255,0.3);
-  left: 1035px;
-  top: 869px;
-  margin: 80px auto;
-  border-radius: 50%;
-  position: fixed;
-  display: none;
+    width: 61px;
+    height: 61px;
+    box-shadow: inset 3px 0 4px -2px rgba(255,255,255,.5);
+    left: 1035px;
+    top: 869px;
+    margin: 80px auto;
+    border-radius: 50%;
+    position: fixed;
+    display: none
 }
 
 #earthSB2 {
-  width: 27px;
-  height: 27px;
-  box-shadow: inset 3px 0 4px -2px rgba(255,255,255,0.5),
-    inset 8px 0 3px -2px rgba(255,255,255,0.3);
-  left: 1464px;
-  top: 237px;
-  margin: 80px auto;
-  border-radius: 50%;
-  position: fixed;
-  display: none;
+    width: 27px;
+    height: 27px;
+    box-shadow: inset 3px 0 4px -2px rgba(255,255,255,.5);
+    left: 1464px;
+    top: 237px;
+    margin: 80px auto;
+    border-radius: 50%;
+    position: fixed;
+    display: none
 }
 
 #earthOUT {
-  width: 70px;
-  height: 70px;
-  box-shadow: -1px 0 2px 1px rgba(0,140,255,0.15);
-  left: 1580px;
-  top: 648px;
-  margin: 80px auto;
-  border-radius: 50%;
-  position: fixed;
-  transform: scale(13);
+    width: 70px;
+    height: 70px;
+    box-shadow: -1px 0 2px 1px rgba(0,140,255,.15);
+    left: 1580px;
+    top: 648px;
+    margin: 80px auto;
+    border-radius: 50%;
+    position: fixed;
+    transform: scale(13)
 }
 
 #earthOUTY {
-  width: 60px;
-  height: 60px;
-  box-shadow: -2px 0 3px 4px rgba(0,140,255,0.15);
-  left: 988px;
-  top: 840px;
-  margin: 80px auto;
-  border-radius: 50%;
-  position: fixed;
-  display: none;
+    width: 60px;
+    height: 60px;
+    box-shadow: -2px 0 3px 4px rgba(0,140,255,.15);
+    left: 988px;
+    top: 840px;
+    margin: 80px auto;
+    border-radius: 50%;
+    position: fixed;
+    display: none
 }
 
 #hud {
-	 background-image: url(src/hudH.png);
-	 opacity: 0.87;
-  width: 1920px;
-  height: 1080px;
-  position: fixed;
-  top: 0px;
-  left: -14px;
+    background-image: url(src/hudH.png);
+    opacity: .87;
+    width: 1920px;
+    height: 1080px;
+    position: fixed;
+    top: 0;
+    left: -14px
 }
 
 #hudT {
-	 background-image: url(src/hudT.png);
-	 opacity: 0.87;
-  width: 1920px;
-  height: 1080px;
-  position: fixed;
-  top: 0px;
-  left: -14px;
-  display:none;
+    background-image: url(src/hudT.png);
+    opacity: .87;
+    width: 1920px;
+    height: 1080px;
+    position: fixed;
+    top: 0;
+    left: -14px;
+    display: none
 }
 
 #hudJ {
-	 background-image: url(src/hudJ.png);
-	 opacity: 0.87;
-  width: 1920px;
-  height: 1080px;
-  position: fixed;
-  top: 0px;
-  left: -14px;
-  display:none;
+    background-image: url(src/hudJ.png);
+    opacity: .87;
+    width: 1920px;
+    height: 1080px;
+    position: fixed;
+    top: 0;
+    left: -14px;
+    display: none
 }
 
 #hudG {
-	 background-image: url(src/hudG.png);
-	 opacity: 0.87;
-  width: 1920px;
-  height: 1080px;
-  position: fixed;
-  top: 0px;
-  left: -14px;
-  display:none;
+    background-image: url(src/hudG.png);
+    opacity: .87;
+    width: 1920px;
+    height: 1080px;
+    position: fixed;
+    top: 0;
+    left: -14px;
+    display: none
 }
 
 #hudE {
-	 background-image: url(src/hudE.png);
-	 opacity: 0.87;
-  width: 1920px;
-  height: 1080px;
-  position: fixed;
-  top: 0px;
-  left: -14px;
-  display:none;
+    background-image: url(src/hudE.png);
+    opacity: .87;
+    width: 1920px;
+    height: 1080px;
+    position: fixed;
+    top: 0;
+    left: -14px;
+    display: none
 }
 
 #hudD {
-	 background-image: url(src/hudD.png);
-	 opacity: 0.87;
-  width: 1920px;
-  height: 1080px;
-  position: fixed;
-  top: 0px;
-  left: -14px;
-  display:none;
+    background-image: url(src/hudD.png);
+    opacity: .87;
+    width: 1920px;
+    height: 1080px;
+    position: fixed;
+    top: 0;
+    left: -14px;
+    display: none
 }
 
 #hudY {
-	 background-image: url(src/hudY.png);
-	 opacity: 0.87;
-  width: 1920px;
-  height: 1080px;
-  position: fixed;
-  top: 0px;
-  left: -14px;
-  display:none;
+    background-image: url(src/hudY.png);
+    opacity: .87;
+    width: 1920px;
+    height: 1080px;
+    position: fixed;
+    top: 0;
+    left: -14px;
+    display: none
 }
 
 #hudM {
-	 background-image: url(src/hudM.png);
-	 opacity: 0.87;
-  width: 1920px;
-  height: 1080px;
-  position: fixed;
-  top: 0px;
-  left: -14px;
-  display:none;
+    background-image: url(src/hudM.png);
+    opacity: .87;
+    width: 1920px;
+    height: 1080px;
+    position: fixed;
+    top: 0;
+    left: -14px;
+    display: none
 }
 
 #hudB {
-	 background-image: url(src/hudB.png);
-	 opacity: 0.87;
-  width: 1920px;
-  height: 1080px;
-  position: fixed;
-  top: 0px;
-  left: -14px;
-  display:none;
+    background-image: url(src/hudB.png);
+    opacity: .87;
+    width: 1920px;
+    height: 1080px;
+    position: fixed;
+    top: 0;
+    left: -14px;
+    display: none
 }
 
 #hudC {
-	 background-image: url(src/hudC.png);
-	 opacity: 0.87;
-  width: 1920px;
-  height: 1080px;
-  position: fixed;
-  top: 0px;
-  left: -14px;
-  display:none;
+    background-image: url(src/hudC.png);
+    opacity: .87;
+    width: 1920px;
+    height: 1080px;
+    position: fixed;
+    top: 0;
+    left: -14px;
+    display: none
 }
 
 #hudDa {
-	 background-image: url(src/hudDa.png);
-	 opacity: 0.87;
-  width: 1920px;
-  height: 1080px;
-  position: fixed;
-  top: 0px;
-  left: -14px;
-  display:none;
+    background-image: url(src/hudDa.png);
+    opacity: .87;
+    width: 1920px;
+    height: 1080px;
+    position: fixed;
+    top: 0;
+    left: -14px;
+    display: none
 }
 
 #hudCo {
-	 background-image: url(src/hudCo.png);
-	 opacity: 0.87;
-  width: 1920px;
-  height: 1080px;
-  position: fixed;
-  top: 0px;
-  left: -14px;
-  display:none;
+    background-image: url(src/hudCo.png);
+    opacity: .87;
+    width: 1920px;
+    height: 1080px;
+    position: fixed;
+    top: 0;
+    left: -14px;
+    display: none
 }
 
 #hudS {
-	 background-image: url(src/hudS.png);
-	 opacity: 0.87;
-  width: 1920px;
-  height: 1080px;
-  position: fixed;
-  top: 0px;
-  left: -14px;
-  display:none;
+    background-image: url(src/hudS.png);
+    opacity: .87;
+    width: 1920px;
+    height: 1080px;
+    position: fixed;
+    top: 0;
+    left: -14px;
+    display: none
 }
 
 #hudDS {
-	 background-image: url(src/hudDS.png);
-	 opacity: 0.87;
-  width: 1920px;
-  height: 1080px;
-  position: fixed;
-  top: 0px;
-  left: -14px;
-  display:none;
+    background-image: url(src/hudDS.png);
+    opacity: .87;
+    width: 1920px;
+    height: 1080px;
+    position: fixed;
+    top: 0;
+    left: -14px;
+    display: none
 }
 
 #hudA {
-	 background-image: url(src/hudA.png);
-	 opacity: 0.87;
-  width: 1920px;
-  height: 1080px;
-  position: fixed;
-  top: 0px;
-  left: -14px;
-  display:none;
+    background-image: url(src/hudA.png);
+    opacity: .87;
+    width: 1920px;
+    height: 1080px;
+    position: fixed;
+    top: 0;
+    left: -14px;
+    display: none
 }
 
 #hudSK {
-	 background-image: url(src/hudSK.png);
-	 opacity: 0.87;
-  width: 1920px;
-  height: 1080px;
-  position: fixed;
-  top: 0px;
-  left: -14px;
-  display:none;
+    background-image: url(src/hudSK.png);
+    opacity: .87;
+    width: 1920px;
+    height: 1080px;
+    position: fixed;
+    top: 0;
+    left: -14px;
+    display: none
 }
 
 #hudF {
-	 background-image: url(src/hudF.png);
-	 opacity: 0.87;
-  width: 1920px;
-  height: 1080px;
-  position: fixed;
-  top: 0px;
-  left: -14px;
-  display:none;
+    background-image: url(src/hudF.png);
+    opacity: .87;
+    width: 1920px;
+    height: 1080px;
+    position: fixed;
+    top: 0;
+    left: -14px;
+    display: none
 }
 
 #geo1 {
-	 background-image: url(src/geo1.png);
-	 opacity: 0.5;
-  width: 896px;
-  height: 104px;
-  left: 1190px;
-  top: 656px;
-  transform: scale(2);
-  position: fixed;
-  display:none;
+    background-image: url(src/geo1.png);
+    opacity: .5;
+    width: 896px;
+    height: 104px;
+    left: 1190px;
+    top: 656px;
+    transform: scale(2);
+    position: fixed;
+    display: none
 }
 
 #geo2 {
-	 background-image: url(src/geo2.png);
-	 opacity: 0.5;
-  width: 896px;
-  height: 104px;
-  left: 1190px;
-  top: 864px;
-  transform: scale(2);
-  position: fixed;
-  display:none;
+    background-image: url(src/geo2.png);
+    opacity: .5;
+    width: 896px;
+    height: 104px;
+    left: 1190px;
+    top: 864px;
+    transform: scale(2);
+    position: fixed;
+    display: none
 }
 
 #dstar {
-	 background-image: url(src/dstar.png);
-  width: 65px;
-  height: 65px;
-  left: 1214px;
-  top: 456px;
-  position: fixed;
-  display: none;
+    background-image: url(src/dstar.png);
+    width: 65px;
+    height: 65px;
+    left: 1214px;
+    top: 456px;
+    position: fixed;
+    display: none
 }
 
 #Dshoot1 {
-	 background-image: url(src/Dshoot1.png);
-	 animation-name: shoot, shootX;
-	 animation-duration: 25s, 0.1s;
-	 animation-iteration-count: infinite;
-	 width: 339px;
-	 height: 290px;
-	 left: 1326px;
-	 top: 347px;
-	 position: fixed;
-	 display: none;
+    background-image: url(src/Dshoot1.png);
+    animation-name: shoot,shootX;
+    animation-duration: 25s,.1s;
+    animation-iteration-count: infinite;
+    width: 339px;
+    height: 290px;
+    left: 1326px;
+    top: 347px;
+    position: fixed;
+    display: none
 }
 
 #Dshoot2 {
-	 background-image: url(src/Dshoot2.png);
-	 	animation-name: shoot2, shootX;
-	animation-duration: 25s, 0.1s;
-	animation-iteration-count: infinite;
-	 width: 750px;
-	 height: 650px;
-	 left: 811px;
-	 top: -10px;
-	 position: fixed;
-	 display: none;
+    background-image: url(src/Dshoot2.png);
+    animation-name: shoot2,shootX;
+    animation-duration: 25s,.1s;
+    animation-iteration-count: infinite;
+    width: 750px;
+    height: 650px;
+    left: 811px;
+    top: -10px;
+    position: fixed;
+    display: none
 }
 
 #SKshoot1 {
-	 background-image: url(src/SKshoot1.png);
-	 animation-name: shoot, shootX;
-	 animation-duration: 25s, 0.1s;
-	 animation-iteration-count: infinite;
-	 width: 739px;
-	 height: 700px;
-	 left: 805px;
-	 top: 234px;
-	 position: fixed;
-	 display: none;
+    background-image: url(src/SKshoot1.png);
+    animation-name: shoot,shootX;
+    animation-duration: 25s,.1s;
+    animation-iteration-count: infinite;
+    width: 739px;
+    height: 700px;
+    left: 805px;
+    top: 234px;
+    position: fixed;
+    display: none
 }
 
 #SKshoot2 {
-	 background-image: url(src/SKshoot2.png);
-	 animation-name: shoot2, shootX;
-	 animation-duration: 25s, 0.1s;
-	 animation-iteration-count: infinite;
-	 width: 1550px;
-	 height: 750px;
-	 left: -38px;
-	 top: 242px;
-	 position: fixed;
-	 display: none;
+    background-image: url(src/SKshoot2.png);
+    animation-name: shoot2,shootX;
+    animation-duration: 25s,.1s;
+    animation-iteration-count: infinite;
+    width: 1550px;
+    height: 750px;
+    left: -38px;
+    top: 242px;
+    position: fixed;
+    display: none
 }
 
 @keyframes shoot {
-  0%   {opacity: 0;}
-  5%   {opacity: 1;}
-  18%  {opacity: 1;}
-  24%  {opacity: 0;}
-  100% {opacity: 0;}
+    0% {
+        opacity: 0
+    }
+
+    5% {
+        opacity: 1
+    }
+
+    18% {
+        opacity: 1
+    }
+
+    24% {
+        opacity: 0
+    }
+
+    to {
+        opacity: 0
+    }
 }
 
 @keyframes shoot2 {
-  0%   {opacity: 0;}
-  4%   {opacity: 0;}
-  6%   {opacity: 1;}
-  17%  {opacity: 1;}
-  23.5%  {opacity: 0;}
-  100% {opacity: 0;}
+    0% {
+        opacity: 0
+    }
+
+    4% {
+        opacity: 0
+    }
+
+    6% {
+        opacity: 1
+    }
+
+    17% {
+        opacity: 1
+    }
+
+    23.5% {
+        opacity: 0
+    }
+
+    to {
+        opacity: 0
+    }
 }
 
 @keyframes shootX {
-  0%   {filter: brightness(95%);}
-  100%   {filter: brightness(100%);}
+    0% {
+        filter: brightness(95%)
+    }
+
+    to {
+        filter: brightness(100%)
+    }
 }
 
-#buttonINF {opacity: 0.87;
-  width: 14px;
-  height: 14px;
-  position: fixed;
-  left: 275px;
-  top: 990px;
+#buttonINF {
+    opacity: .87;
+    width: 14px;
+    height: 14px;
+    position: fixed;
+    left: 275px;
+    top: 990px
 }
 
-#buttonOFF {opacity: 0.87;
-  width: 14px;
-  height: 14px;
-  position: fixed;
-  left: 275px;
-  top: 748px;
-  cursor:pointer;}
+#buttonOFF {
+    opacity: .87;
+    width: 14px;
+    height: 14px;
+    position: fixed;
+    left: 275px;
+    top: 748px;
+    cursor: pointer
+}
 
-#button1 {opacity: 0.87;
-  width: 14px;
-  height: 14px;
-  position: fixed;
-  left: 275px;
-  top: 765px;
-  cursor:pointer;}
-  
-#button2 {opacity: 0.87;
-  width: 14px;
-  height: 14px;
-  position: fixed;
-  left: 275px;
-  top: 778px;
-  cursor :pointer;
-  }
-  
-#button3 {opacity: 0.87;
-  width: 14px;
-  height: 14px;
-  position: fixed;
-  left: 275px;
-  top: 791px;
-  cursor:pointer;
-  }
-  
-#button4 {opacity: 0.87;
-  width: 14px;
-  height: 14px;
-  position: fixed;
-  left: 275px;
-  top: 804px;
-  cursor:pointer;
-  }
-  
-#button5 {opacity: 0.87;
-  width: 14px;
-  height: 14px;
-  position: fixed;
-  left: 275px;
-  top: 817px;
-  cursor:pointer;
-  }
-  
-#button6 {opacity: 0.87;
-  width: 14px;
-  height: 14px;
-  position: fixed;
-  left: 275px;
-  top: 830px;
-  cursor:pointer;
-  }
-  
-#button7 {opacity: 0.87;
-  width: 14px;
-  height: 14px;
-  position: fixed;
-  left: 275px;
-  top: 843px;
-  cursor:pointer;
-  }
-  
-#button8 {opacity: 0.87;
-  width: 14px;
-  height: 14px;
-  position: fixed;
-  left: 275px;
-  top: 856px;
-  cursor:pointer;
-  }
-  
-#button9 {opacity: 0.87;
-  width: 14px;
-  height: 14px;
-  position: fixed;
-  left: 275px;
-  top: 869px;
-  cursor:pointer;
-  }
-  
-#button10 {opacity: 0.87;
-  width: 14px;
-  height: 14px;
-  position: fixed;
-  left: 275px;
-  top: 882px;
-  cursor:pointer;
-  }
-#button11 {opacity: 0.87;
-  width: 14px;
-  height: 14px;
-  position: fixed;
-  left: 275px;
-  top: 895px;
-  cursor:pointer;
-  }
-  
-#button12 {opacity: 0.87;
-  width: 14px;
-  height: 14px;
-  position: fixed;
-  left: 275px;
-  top: 908px;
-  cursor:pointer;
-  }
-  
-#button13 {opacity: 0.87;
-  width: 14px;
-  height: 14px;
-  position: fixed;
-  left: 275px;
-  top: 921px;
-  cursor:pointer;
-  }
-  
-#button14 {opacity: 0.87;
-  width: 14px;
-  height: 14px;
-  position: fixed;
-  left: 275px;
-  top: 934px;
-  cursor:pointer;
-  }
+#button1 {
+    opacity: .87;
+    width: 14px;
+    height: 14px;
+    position: fixed;
+    left: 275px;
+    top: 765px;
+    cursor: pointer
+}
 
-#button15 {opacity: 0.87;
-  width: 14px;
-  height: 14px;
-  position: fixed;
-  left: 275px;
-  top: 947px;
-  cursor:pointer;
-  }
-  
-#button16 {opacity: 0.87;
-  width: 14px;
-  height: 14px;
-  position: fixed;
-  left: 275px;
-  top: 960px;
-  cursor:pointer;
-  }
-  
-#button17 {opacity: 0.87;
-  width: 14px;
-  height: 14px;
-  position: fixed;
-  left: 275px;
-  top: 973px;
-  cursor:pointer;
-  }
+#button2 {
+    opacity: .87;
+    width: 14px;
+    height: 14px;
+    position: fixed;
+    left: 275px;
+    top: 778px;
+    cursor: pointer
+}
+
+#button3 {
+    opacity: .87;
+    width: 14px;
+    height: 14px;
+    position: fixed;
+    left: 275px;
+    top: 791px;
+    cursor: pointer
+}
+
+#button4 {
+    opacity: .87;
+    width: 14px;
+    height: 14px;
+    position: fixed;
+    left: 275px;
+    top: 804px;
+    cursor: pointer
+}
+
+#button5 {
+    opacity: .87;
+    width: 14px;
+    height: 14px;
+    position: fixed;
+    left: 275px;
+    top: 817px;
+    cursor: pointer
+}
+
+#button6 {
+    opacity: .87;
+    width: 14px;
+    height: 14px;
+    position: fixed;
+    left: 275px;
+    top: 830px;
+    cursor: pointer
+}
+
+#button7 {
+    opacity: .87;
+    width: 14px;
+    height: 14px;
+    position: fixed;
+    left: 275px;
+    top: 843px;
+    cursor: pointer
+}
+
+#button8 {
+    opacity: .87;
+    width: 14px;
+    height: 14px;
+    position: fixed;
+    left: 275px;
+    top: 856px;
+    cursor: pointer
+}
+
+#button9 {
+    opacity: .87;
+    width: 14px;
+    height: 14px;
+    position: fixed;
+    left: 275px;
+    top: 869px;
+    cursor: pointer
+}
+
+#button10 {
+    opacity: .87;
+    width: 14px;
+    height: 14px;
+    position: fixed;
+    left: 275px;
+    top: 882px;
+    cursor: pointer
+}
+
+#button11 {
+    opacity: .87;
+    width: 14px;
+    height: 14px;
+    position: fixed;
+    left: 275px;
+    top: 895px;
+    cursor: pointer
+}
+
+#button12 {
+    opacity: .87;
+    width: 14px;
+    height: 14px;
+    position: fixed;
+    left: 275px;
+    top: 908px;
+    cursor: pointer
+}
+
+#button13 {
+    opacity: .87;
+    width: 14px;
+    height: 14px;
+    position: fixed;
+    left: 275px;
+    top: 921px;
+    cursor: pointer
+}
+
+#button14 {
+    opacity: .87;
+    width: 14px;
+    height: 14px;
+    position: fixed;
+    left: 275px;
+    top: 934px;
+    cursor: pointer
+}
+
+#button15 {
+    opacity: .87;
+    width: 14px;
+    height: 14px;
+    position: fixed;
+    left: 275px;
+    top: 947px;
+    cursor: pointer
+}
+
+#button16 {
+    opacity: .87;
+    width: 14px;
+    height: 14px;
+    position: fixed;
+    left: 275px;
+    top: 960px;
+    cursor: pointer
+}
+
+#button17 {
+    opacity: .87;
+    width: 14px;
+    height: 14px;
+    position: fixed;
+    left: 275px;
+    top: 973px;
+    cursor: pointer
+}
 
 #clouds {
-	 background-image: url(src/clouds.png);
-	 opacity: 0.97;
-  position: fixed;
-  width: 105%;
-  height: 105%;
-  overflow: hidden;
-  left: -10px;
-  top: -10px;
+    background-image: url(src/clouds.png);
+    opacity: .97;
+    position: fixed;
+    width: 105%;
+    height: 105%;
+    overflow: hidden;
+    left: -10px;
+    top: -10px
 }
 
 #select {
-	background-image: url(src/select.png);
-	opacity: 0.87;
-  width: 31px;
-  height: 14px;
-  position: fixed;
-  left: 244px;
-  top: 765px;
-  }
-  
+    background-image: url(src/select.png);
+    opacity: .87;
+    width: 31px;
+    height: 14px;
+    position: fixed;
+    left: 244px;
+    top: 765px
+}
+
 #select2 {
-	background-image: url(src/select.png);
-	opacity: 0.87;
-  width: 31px;
-  height: 14px;
-  position: fixed;
-  left: 244px;
-  top: 778px;
-  display: none;
-  }
-  
+    background-image: url(src/select.png);
+    opacity: .87;
+    width: 31px;
+    height: 14px;
+    position: fixed;
+    left: 244px;
+    top: 778px;
+    display: none
+}
+
 #select3 {
-	background-image: url(src/select.png);
-	opacity: 0.87;
-  width: 31px;
-  height: 14px;
-  position: fixed;
-  left: 244px;
-  top: 791px;
-  display: none;
-  }
-  
+    background-image: url(src/select.png);
+    opacity: .87;
+    width: 31px;
+    height: 14px;
+    position: fixed;
+    left: 244px;
+    top: 791px;
+    display: none
+}
+
 #select4 {
-	background-image: url(src/select.png);
-	opacity: 0.87;
-  width: 31px;
-  height: 14px;
-  position: fixed;
-  left: 244px;
-  top: 804px;
-  display: none;
-  }
-  
+    background-image: url(src/select.png);
+    opacity: .87;
+    width: 31px;
+    height: 14px;
+    position: fixed;
+    left: 244px;
+    top: 804px;
+    display: none
+}
+
 #select5 {
-	background-image: url(src/select.png);
-	opacity: 0.87;
-  width: 31px;
-  height: 14px;
-  position: fixed;
-  left: 244px;
-  top: 817px;
-  display: none;
-  }
-  
+    background-image: url(src/select.png);
+    opacity: .87;
+    width: 31px;
+    height: 14px;
+    position: fixed;
+    left: 244px;
+    top: 817px;
+    display: none
+}
+
 #select6 {
-	background-image: url(src/select.png);
-	opacity: 0.87;
-  width: 31px;
-  height: 14px;
-  position: fixed;
-  left: 244px;
-  top: 830px;
-  display: none;
-  }
+    background-image: url(src/select.png);
+    opacity: .87;
+    width: 31px;
+    height: 14px;
+    position: fixed;
+    left: 244px;
+    top: 830px;
+    display: none
+}
+
 #select7 {
-	background-image: url(src/select.png);
-	opacity: 0.87;
-  width: 31px;
-  height: 14px;
-  position: fixed;
-  left: 244px;
-  top: 843px;
-  display: none;
-  }
-  
+    background-image: url(src/select.png);
+    opacity: .87;
+    width: 31px;
+    height: 14px;
+    position: fixed;
+    left: 244px;
+    top: 843px;
+    display: none
+}
+
 #select8 {
-	background-image: url(src/select.png);
-	opacity: 0.87;
-  width: 31px;
-  height: 14px;
-  position: fixed;
-  left: 244px;
-  top: 856px;
-  display: none;
-  }
-  
+    background-image: url(src/select.png);
+    opacity: .87;
+    width: 31px;
+    height: 14px;
+    position: fixed;
+    left: 244px;
+    top: 856px;
+    display: none
+}
+
 #select9 {
-	background-image: url(src/select.png);
-	opacity: 0.87;
-  width: 31px;
-  height: 14px;
-  position: fixed;
-  left: 244px;
-  top: 869px;
-  display: none;
-  }
-  
+    background-image: url(src/select.png);
+    opacity: .87;
+    width: 31px;
+    height: 14px;
+    position: fixed;
+    left: 244px;
+    top: 869px;
+    display: none
+}
+
 #select10 {
-	background-image: url(src/select.png);
-	opacity: 0.87;
-  width: 31px;
-  height: 14px;
-  position: fixed;
-  left: 244px;
-  top: 882px;
-  display: none;
-  }
-  
+    background-image: url(src/select.png);
+    opacity: .87;
+    width: 31px;
+    height: 14px;
+    position: fixed;
+    left: 244px;
+    top: 882px;
+    display: none
+}
+
 #select11 {
-	background-image: url(src/select.png);
-	opacity: 0.87;
-  width: 31px;
-  height: 14px;
-  position: fixed;
-  left: 244px;
-  top: 895px;
-  display: none;
-  }
-  
+    background-image: url(src/select.png);
+    opacity: .87;
+    width: 31px;
+    height: 14px;
+    position: fixed;
+    left: 244px;
+    top: 895px;
+    display: none
+}
+
 #select12 {
-	background-image: url(src/select.png);
-	opacity: 0.87;
-  width: 31px;
-  height: 14px;
-  position: fixed;
-  left: 244px;
-  top: 908px;
-  display: none;
-  }
-  
+    background-image: url(src/select.png);
+    opacity: .87;
+    width: 31px;
+    height: 14px;
+    position: fixed;
+    left: 244px;
+    top: 908px;
+    display: none
+}
+
 #select13 {
-	background-image: url(src/select.png);
-	opacity: 0.87;
-  width: 31px;
-  height: 14px;
-  position: fixed;
-  left: 244px;
-  top: 921px;
-  display: none;
-  }
-  
+    background-image: url(src/select.png);
+    opacity: .87;
+    width: 31px;
+    height: 14px;
+    position: fixed;
+    left: 244px;
+    top: 921px;
+    display: none
+}
+
 #select14 {
-	background-image: url(src/select.png);
-	opacity: 0.87;
-  width: 31px;
-  height: 14px;
-  position: fixed;
-  left: 244px;
-  top: 934px;
-  display: none;
-  }
-  
+    background-image: url(src/select.png);
+    opacity: .87;
+    width: 31px;
+    height: 14px;
+    position: fixed;
+    left: 244px;
+    top: 934px;
+    display: none
+}
+
 #select15 {
-	background-image: url(src/select.png);
-	opacity: 0.87;
-  width: 31px;
-  height: 14px;
-  position: fixed;
-  left: 244px;
-  top: 947px;
-  display: none;
-  }
-  
+    background-image: url(src/select.png);
+    opacity: .87;
+    width: 31px;
+    height: 14px;
+    position: fixed;
+    left: 244px;
+    top: 947px;
+    display: none
+}
+
 #select16 {
-	background-image: url(src/select.png);
-	opacity: 0.87;
-  width: 31px;
-  height: 14px;
-  position: fixed;
-  left: 244px;
-  top: 960px;
-  display: none;
-  }
-  
+    background-image: url(src/select.png);
+    opacity: .87;
+    width: 31px;
+    height: 14px;
+    position: fixed;
+    left: 244px;
+    top: 960px;
+    display: none
+}
+
 #select17 {
-	background-image: url(src/select.png);
-	opacity: 0.87;
-  width: 31px;
-  height: 14px;
-  position: fixed;
-  left: 244px;
-  top: 973px;
-  display: none;
-  }
+    background-image: url(src/select.png);
+    opacity: .87;
+    width: 31px;
+    height: 14px;
+    position: fixed;
+    left: 244px;
+    top: 973px;
+    display: none
+}
 
 #stars {
-	background-image: url(src/stars.jpg);
-  position: fixed;
-  width: 105%;
-  height: 105%;
-  overflow: hidden;
-  left: -20px;
+    background-image: url(src/stars.jpg);
+    position: fixed;
+    width: 105%;
+    height: 105%;
+    overflow: hidden;
+    left: -20px
 }
 
 #stars2 {
-	background-image: url(src/stars2.png);
-	animation-name: starZ;
-	animation-duration: 4s;
-	animation-iteration-count: infinite;
-  position: fixed;
-  width: 105%;
-  height: 105%;
-  overflow: hidden;
-  left: -20px;
+    background-image: url(src/stars2.png);
+    animation-name: starZ;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    position: fixed;
+    width: 105%;
+    height: 105%;
+    overflow: hidden;
+    left: -20px
 }
 
 #stars3 {
-	background-image: url(src/stars3.png);
-	animation-name: starZ;
-	animation-duration: 4s;
-	animation-iteration-count: infinite;
-	animation-delay: 2.5s;
-  position: fixed;
-  width: 105%;
-  height: 105%;
-  overflow: hidden;
-  left: -20px;
+    background-image: url(src/stars3.png);
+    animation-name: starZ;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-delay: 2.5s;
+    position: fixed;
+    width: 105%;
+    height: 105%;
+    overflow: hidden;
+    left: -20px
 }
 
 #stars4 {
-	background-image: url(src/stars4.png);
-	animation-name: starZ;
-	animation-duration: 4s;
-	animation-iteration-count: infinite;
-	animation-delay: 5s;
-  position: fixed;
-  width: 105%;
-  height: 105%;
-  overflow: hidden;
-  left: -20px;
+    background-image: url(src/stars4.png);
+    animation-name: starZ;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-delay: 5s;
+    position: fixed;
+    width: 105%;
+    height: 105%;
+    overflow: hidden;
+    left: -20px
 }
 
 #stars5 {
-	background-image: url(src/stars5.png);
-	animation-name: starZ;
-	animation-duration: 4s;
-	animation-iteration-count: infinite;
-	animation-delay: 7s;
-  position: fixed;
-  width: 105%;
-  height: 105%;
-  overflow: hidden;
-  left: -20px;
+    background-image: url(src/stars5.png);
+    animation-name: starZ;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-delay: 7s;
+    position: fixed;
+    width: 105%;
+    height: 105%;
+    overflow: hidden;
+    left: -20px
 }
 
 @keyframes starZ {
-  0%   {opacity: 1;}
-  50%  {opacity: 0.1;}
-  100% {opacity: 1;}
+    0% {
+        opacity: 1
+    }
+
+    50% {
+        opacity: .1
+    }
+
+    to {
+        opacity: 1
+    }
 }
 
-::-webkit-scrollbar
-{
-    width:0px;
+::-webkit-scrollbar {
+    width: 0
 }
-::-webkit-scrollbar-track-piece
-{
-    background-color:transparent;
+
+::-webkit-scrollbar-track-piece {
+    background-color: transparent
 }
