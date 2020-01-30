@@ -5,24 +5,27 @@ function Parallax(options){
         layers: options.layers || '.parallax-layer',
         deep: options.deep || 'data-parallax-deep'
     };
-    this.init = function() {
+	
+    this.init = () => {
         let self = this,
-            parallaxWrappers = document.querySelectorAll(this.nameSpaces.wrapper);
+        parallaxWrappers = document.querySelectorAll(this.nameSpaces.wrapper);
+			
       	for(let i = 0; i < parallaxWrappers.length; i++){
 			(function(i){
-				parallaxWrappers[i].addEventListener('mousemove', function(e){
-					let x = e.clientX,
-						y = e.clientY,
-						layers = parallaxWrappers[i].querySelectorAll(self.nameSpaces.layers);
+				  parallaxWrappers[i].addEventListener('mousemove', function(e){
+					x = e.clientX,
+				    y = e.clientY,
+					layers = parallaxWrappers[i].querySelectorAll(self.nameSpaces.layers);
+					
 					for(let j = 0; j < layers.length; j++){
-            (function(j){
-              let deep = layers[j].getAttribute(self.nameSpaces.deep),
-                  disallow = layers[j].getAttribute('data-parallax-disallow'),
-                  itemX = (disallow && disallow === 'x') ? 0 : x / deep,
-                  itemY = (disallow && disallow === 'y') ? 0 : y / deep;
-                  if(disallow && disallow === 'both') return;
-                  layers[j].style.transform = 'translateX(' + itemX + '%) translateY(' + itemY + '%)';
-            })(j);  
+						(function(j){
+							  deep = layers[j].getAttribute(self.nameSpaces.deep),
+							  disallow = layers[j].getAttribute('data-parallax-disallow'),
+							  itemX = (disallow && disallow === 'x') ? 0 : x / deep,
+							  itemY = (disallow && disallow === 'y') ? 0 : y / deep;
+							  if(disallow && disallow === 'both') return;
+							  layers[j].style.transform = 'translateX(' + itemX + '%) translateY(' + itemY + '%)';
+						})(j);  
 					}
 				})
 			})(i);
